@@ -162,6 +162,10 @@
   .why h2 .g{color:var(--blue-bright)}
   .why p{color:var(--muted);font-size:17px;margin-bottom:18px;max-width:52ch}
   .why p b{color:var(--ink);font-weight:600}
+  .why .signature{display:flex;align-items:center;gap:9px;font-size:16px;color:var(--ink);font-weight:500;margin:4px 0 22px}
+  .why .signature .sig-spark{color:var(--blue-bright);font-size:15px;flex:0 0 auto}
+  .why .signature a{color:var(--blue-bright);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+  .why .signature a:hover{color:#fff}
   .panel-card{background:var(--panel);border:1px solid var(--line-2);border-radius:14px;padding:8px}
   .pc-row{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-radius:9px}
   .pc-row+.pc-row{border-top:1px solid var(--line)}
@@ -224,6 +228,8 @@
   footer{border-top:1px solid var(--line);padding:38px 0}
   .foot{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
   .foot small{color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:13px}
+  .foot small a{color:var(--blue-bright);text-decoration:underline;text-underline-offset:2px}
+  .foot small a:hover{color:#fff}
 
   /* --- LIGHT SECTIONS (alternating bands, StudioHawk-style) --- */
   section.light{
@@ -432,6 +438,7 @@
           <h2>You hire me. You <span class="g">get</span> me.</h2>
           <p>Agencies sell you a senior, then hand you a junior. <b>With me, you get me.</b> Strategy, the work, the reporting, one person who owns the result.</p>
           <p>Low overhead means honest prices and fast answers. You always know what I'm doing, and why it pays off.</p>
+          <p class="signature"><span class="sig-spark" aria-hidden="true">✦</span> I'm <a href="https://www.linkedin.com/in/technicalseo/" target="_blank" rel="noopener">Jessica Schmukler</a>, the specialist behind SparkPlug SEO.</p>
           <a href="#contact" class="btn btn-ghost" style="margin-top:8px">Talk to me directly →</a>
         </div>
         <div class="panel-card">
@@ -574,7 +581,7 @@
         <span class="brand-word">Spark<span class="bp">Plug</span></span>
         <span class="brand-chip">SEO</span>
       </a>
-      <small>SEO &amp; AI Search Specialist · Buenos Aires, Argentina · © 2026</small>
+      <small>Run by <a href="https://www.linkedin.com/in/technicalseo/" target="_blank" rel="noopener">Jessica Schmukler</a> · SEO &amp; AI Search Specialist · Buenos Aires, Argentina · © 2026</small>
     </div>
   </div>
 </footer>
