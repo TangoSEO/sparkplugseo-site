@@ -36,9 +36,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-<!-- Cloudflare Turnstile (real spam protection) -->
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
 <!-- Google Analytics 4 — replace G-XXXXXXXXXX with your Measurement ID -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
@@ -492,9 +489,6 @@
                 <button type="button" class="refresh" id="capRefresh" aria-label="New question">↻</button>
               </div>
             </div>
-            <!-- Cloudflare Turnstile: replace YOUR_TURNSTILE_SITE_KEY with the site key from the Turnstile dashboard.
-                 Web3Forms verifies this token server-side automatically. -->
-            <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY" data-theme="dark"></div>
             <div class="form-msg" id="formMsg"></div>
             <button type="submit" class="btn btn-primary" style="width:100%">Send enquiry →</button>
           </form>
