@@ -85,8 +85,11 @@
 
   header{position:sticky;top:0;z-index:50;background:rgba(10,12,16,0.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
-  .brand{font-weight:700;font-size:19px;letter-spacing:-0.01em;display:flex;align-items:center;gap:10px}
-  .brand .sq{width:26px;height:26px;border-radius:6px;background:var(--blue);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;color:#fff;box-shadow:0 0 16px -2px var(--blue)}
+  .brand{display:flex;align-items:center;gap:9px;line-height:1}
+  .brand-mark{width:30px;height:30px;flex:0 0 auto;filter:drop-shadow(0 0 14px color-mix(in srgb,var(--blue) 45%,transparent))}
+  .brand-word{font-family:var(--font-display);font-weight:800;font-size:21px;letter-spacing:-0.02em;color:var(--ink)}
+  .brand-word .bp{color:var(--blue-bright)}
+  .brand-chip{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:11px;letter-spacing:0.1em;color:#fff;background:var(--blue);border-radius:6px;padding:3px 7px;box-shadow:0 0 0 1px color-mix(in srgb,var(--blue) 40%,transparent)}
   .nav-links{display:flex;align-items:center;gap:32px;font-size:14px;font-weight:500;font-family:'JetBrains Mono',monospace}
   .nav-links a:not(.btn):hover{color:var(--blue-bright)}
   .nav-toggle{display:none;background:none;border:0;flex-direction:column;gap:5px;cursor:pointer}
@@ -351,7 +354,11 @@
 <header>
   <div class="wrap">
     <nav class="nav" id="nav">
-      <a class="brand" href="#top"><span class="sq">JS</span>Jessica Schmukler</a>
+      <a class="brand" href="#top" aria-label="SparkPlug SEO home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bgrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><path d="M35 11 L18 36 H29 L27 54 L47 27 H35 L40 11 Z" fill="url(#bgrad)"/></svg>
+        <span class="brand-word">Spark<span class="bp">Plug</span></span>
+        <span class="brand-chip">SEO</span>
+      </a>
       <div class="nav-links">
         <a href="#services">services</a>
         <a href="#why">why_me</a>
@@ -562,7 +569,11 @@
 <footer>
   <div class="wrap">
     <div class="foot">
-      <a class="brand" href="#top"><span class="sq">JS</span>Jessica Schmukler</a>
+      <a class="brand" href="#top" aria-label="SparkPlug SEO home">
+        <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="bgradf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#60a5fa"/><stop offset="1" stop-color="#2563eb"/></linearGradient></defs><path d="M35 11 L18 36 H29 L27 54 L47 27 H35 L40 11 Z" fill="url(#bgradf)"/></svg>
+        <span class="brand-word">Spark<span class="bp">Plug</span></span>
+        <span class="brand-chip">SEO</span>
+      </a>
       <small>SEO &amp; AI Search Specialist · Buenos Aires, Argentina · © 2026</small>
     </div>
   </div>
