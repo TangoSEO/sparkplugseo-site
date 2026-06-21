@@ -1,0 +1,10 @@
+{
+  "name": "SparkPlug SEO",
+  "short_name": "SparkPlug",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ],
+  "theme_color": "#0a0c10",
+  "background_color": "#0a0c10",
+  "display": "standalone"
+}

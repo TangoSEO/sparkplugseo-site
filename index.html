@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>SparkPlug SEO — Technical SEO &amp; AI Search Specialist | Jessica Schmukler</title>
+<meta name="description" content="Solo SEO &amp; AI Search specialist for small businesses and professionals. Technical SEO, indexing fixes, content and strategy that gets you found in Google and AI search. Plans from $300/mo." />
+<link rel="canonical" href="https://sparkplugseo.com/" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#0a0c10" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="SparkPlug SEO" />
+<meta property="og:title" content="SparkPlug SEO — Technical SEO &amp; AI Search Specialist" />
+<meta property="og:description" content="A damn good SEO &amp; AI Search specialist. Technical SEO, indexing, content &amp; strategy. Plans from $300/mo." />
+<meta property="og:url" content="https://sparkplugseo.com/" />
+<meta property="og:image" content="https://sparkplugseo.com/assets/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="SparkPlug SEO — Technical SEO &amp; AI Search Specialist" />
+<meta name="twitter:description" content="A damn good SEO &amp; AI Search specialist. Plans from $300/mo." />
+<meta name="twitter:image" content="https://sparkplugseo.com/assets/og-image.png" />
+
+<!-- Icons -->
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<!-- Cloudflare Turnstile (real spam protection) -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+<!-- Google Analytics 4 — replace G-XXXXXXXXXX with your Measurement ID -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<style>
+  /* Headings use Hanken Grotesk (open-source, SIL OFL) by default — a close match to Degular.
+     Degular is commercial; if you license it, host the .woff2 files and uncomment to switch automatically:
+  @font-face{font-family:'Degular';src:url('fonts/Degular-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
+  @font-face{font-family:'Degular';src:url('fonts/Degular-Semibold.woff2') format('woff2');font-weight:600;font-display:swap}
+  @font-face{font-family:'Degular';src:url('fonts/Degular-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
+  */
+  :root{
+    --bg:#0a0c10;
+    --panel:#0f1218;
+    --panel-2:#141821;
+    --ink:#e8ebf0;
+    --muted:#8b94a3;
+    --blue:#3b82f6;
+    --blue-bright:#60a5fa;
+    --line:#1e2530;
+    --line-2:#2a3340;
+    --maxw:1200px;
+    --font-body:'Archivo',sans-serif;
+    --font-display:'Degular','Hanken Grotesk',sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--font-body);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:64px 64px;background-position:center top}
+  h1,h2,h3{font-family:var(--font-display)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
+  a{color:inherit;text-decoration:none}
+  .mono{font-family:'JetBrains Mono',monospace}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue-bright);display:inline-flex;align-items:center;gap:8px}
+  .eyebrow::before{content:"";width:7px;height:7px;background:var(--blue);border-radius:50%;box-shadow:0 0 10px var(--blue)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:15px;padding:13px 24px;border-radius:8px;cursor:pointer;transition:.16s ease;line-height:1;border:1px solid transparent;font-family:var(--font-body)}
+  .btn-primary{background:var(--blue);color:#fff;box-shadow:0 0 0 1px color-mix(in srgb,var(--blue) 40%,transparent),0 8px 24px -8px color-mix(in srgb,var(--blue) 60%,transparent)}
+  .btn-primary:hover{background:var(--blue-bright)}
+  .btn-ghost{background:var(--panel-2);color:var(--ink);border-color:var(--line-2)}
+  .btn-ghost:hover{border-color:var(--blue);color:var(--blue-bright)}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(10,12,16,0.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{font-weight:700;font-size:19px;letter-spacing:-0.01em;display:flex;align-items:center;gap:10px}
+  .brand .sq{width:26px;height:26px;border-radius:6px;background:var(--blue);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-weight:700;font-size:13px;color:#fff;box-shadow:0 0 16px -2px var(--blue)}
+  .nav-links{display:flex;align-items:center;gap:32px;font-size:14px;font-weight:500;font-family:'JetBrains Mono',monospace}
+  .nav-links a:not(.btn):hover{color:var(--blue-bright)}
+  .nav-toggle{display:none;background:none;border:0;flex-direction:column;gap:5px;cursor:pointer}
+  .nav-toggle span{width:24px;height:2px;background:var(--ink);display:block}
+
+  /* HERO */
+  .hero{padding:90px 0 70px;position:relative}
+  .hero-inner{max-width:880px;position:relative}
+  .hero h1{font-size:clamp(42px,6.6vw,82px);font-weight:600;line-height:1.02;letter-spacing:-0.025em;margin:24px 0}
+  .hero h1 .g{color:var(--blue-bright)}
+  .hero h1 .mark{display:inline-block;white-space:nowrap;background:var(--blue);color:#fff;padding:0 .14em;border-radius:12px;transform:rotate(-2deg);box-shadow:0 12px 38px -12px color-mix(in srgb,var(--blue) 78%,transparent)}
+  .spark{position:absolute;color:var(--blue-bright);pointer-events:none;opacity:.55;line-height:1;z-index:2}
+  .spark.s1{top:-8px;right:7%;font-size:30px}
+  .spark.s2{top:40%;left:-20px;font-size:20px}
+  .spark.s3{bottom:16%;right:16%;font-size:15px}
+  /* stat panel (replaces terminal) */
+  .statcard{margin-top:48px;background:var(--panel);border:1px solid var(--line-2);border-radius:16px;padding:24px 28px;max-width:600px;box-shadow:0 30px 80px -40px rgba(0,0,0,.8)}
+  .sc-head{display:flex;align-items:center;justify-content:space-between;gap:14px}
+  .sc-tag{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--blue-bright);letter-spacing:.06em}
+  .sc-live{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px}
+  .sc-live .d{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 10px #4ade80}
+  .sc-main{display:flex;align-items:center;gap:18px;margin:12px 0 18px;flex-wrap:wrap}
+  .sc-num{font-family:var(--font-display);font-size:clamp(44px,6vw,72px);font-weight:700;line-height:.85;letter-spacing:-.03em;color:var(--blue-bright)}
+  .sc-num .plus{color:var(--blue)}
+  .sc-cap{font-size:15.5px;color:#c3cad6;max-width:18ch;font-weight:500}
+  .sc-regions{display:flex;align-items:center;gap:9px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}
+  .rchip{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.04em;color:#dfe4ec;background:var(--panel-2);border:1px solid var(--line-2);border-radius:9px;padding:7px 13px;transition:.16s}
+  .rchip:hover{border-color:var(--blue);color:#fff;transform:translateY(-2px) rotate(-3deg)}
+  .rnote{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-left:auto}
+  @media (prefers-reduced-motion: no-preference){
+    .hero h1 .mark{animation:markPop .55s .15s cubic-bezier(.2,.9,.25,1) both}
+    .spark{animation:twinkle 2.6s ease-in-out infinite}
+    .spark.s2{animation-delay:.7s}
+    .spark.s3{animation-delay:1.3s}
+    .sc-live .d{animation:scpulse 1.8s ease-in-out infinite}
+  }
+  @keyframes markPop{from{opacity:0;transform:rotate(-2deg) scale(.8)}to{opacity:1;transform:rotate(-2deg) scale(1)}}
+  @keyframes twinkle{0%,100%{opacity:.3;transform:rotate(0) scale(.85)}50%{opacity:1;transform:rotate(90deg) scale(1.12)}}
+  @keyframes scpulse{0%,100%{opacity:.5;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}
+  .hero p.lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:60ch}
+  .hero-cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+  .terminal{margin-top:54px;background:var(--panel);border:1px solid var(--line-2);border-radius:12px;overflow:hidden;box-shadow:0 30px 80px -40px rgba(0,0,0,.8)}
+  .term-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel-2)}
+  .term-bar .dt{width:11px;height:11px;border-radius:50%;background:#2a3340}
+  .term-bar .ttl{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-left:8px}
+  .term-body{padding:22px 24px;font-family:'JetBrains Mono',monospace;font-size:14px;line-height:1.9}
+  .term-body .c{color:var(--muted)}
+  .term-body .p{color:var(--blue-bright)}
+  .term-body .ok{color:#4ade80}
+  .term-body .v{color:var(--ink)}
+
+  section{padding:92px 0;position:relative}
+  .sec-head{margin-bottom:52px}
+  .sec-head h2{font-size:clamp(30px,4.4vw,52px);font-weight:600;letter-spacing:-0.02em;margin-top:16px;max-width:20ch}
+  .sec-head p{color:var(--muted);font-size:17px;margin-top:14px;max-width:56ch}
+
+  /* SERVICES */
+  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .svc{background:var(--panel);border:1px solid var(--line-2);border-radius:12px;padding:30px;transition:.2s;position:relative;overflow:hidden}
+  .svc::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--blue),transparent);opacity:0;transition:.2s}
+  .svc:hover{border-color:var(--blue);background:var(--panel-2)}
+  .svc:hover::before{opacity:1}
+  .svc .tag{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--blue-bright);letter-spacing:0.04em}
+  .svc h3{font-size:23px;font-weight:600;margin:14px 0 10px}
+  .svc p{color:var(--muted);font-size:15px}
+
+  /* WHY / metrics */
+  .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+  .why h2{font-size:clamp(30px,4vw,50px);font-weight:600;letter-spacing:-0.02em;margin:16px 0 22px}
+  .why h2 .g{color:var(--blue-bright)}
+  .why p{color:var(--muted);font-size:17px;margin-bottom:18px;max-width:52ch}
+  .why p b{color:var(--ink);font-weight:600}
+  .panel-card{background:var(--panel);border:1px solid var(--line-2);border-radius:14px;padding:8px}
+  .pc-row{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-radius:9px}
+  .pc-row+.pc-row{border-top:1px solid var(--line)}
+  .pc-row .lab{display:flex;align-items:center;gap:13px;font-size:15px;font-weight:500}
+  .pc-row .lab .i{width:34px;height:34px;border-radius:8px;background:var(--panel-2);border:1px solid var(--line-2);display:grid;place-items:center;color:var(--blue-bright);font-family:'JetBrains Mono',monospace;font-size:13px;flex:0 0 auto}
+  .pc-row .val{font-family:'JetBrains Mono',monospace;font-size:13px;color:#4ade80;display:flex;align-items:center;gap:7px}
+  .pc-row .val .d{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px #4ade80}
+
+  /* PRICING */
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+  .plan{background:var(--panel);border:1px solid var(--line-2);border-radius:14px;padding:32px 28px;display:flex;flex-direction:column;position:relative}
+  .plan.featured{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue),0 30px 70px -40px color-mix(in srgb,var(--blue) 60%,transparent);background:linear-gradient(180deg,color-mix(in srgb,var(--blue) 8%,transparent),transparent)}
+  .plan .pin{position:absolute;top:-11px;left:28px;background:var(--blue);color:#fff;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:5px 11px;border-radius:6px}
+  .plan .pname{font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:var(--blue-bright)}
+  .plan .pfor{font-size:14px;color:var(--muted);margin-top:12px;min-height:44px}
+  .plan .price{display:flex;align-items:baseline;gap:4px;margin:18px 0 4px}
+  .plan .price .cur{font-size:22px;color:var(--muted);align-self:flex-start;margin-top:8px}
+  .plan .price .amt{font-size:54px;font-weight:600;line-height:1;letter-spacing:-0.02em}
+  .plan .price .per{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted)}
+  .plan hr{border:0;border-top:1px solid var(--line);margin:22px 0}
+  .feat{list-style:none;display:grid;gap:12px;margin-bottom:28px;flex:1}
+  .feat li{display:flex;gap:11px;font-size:14px;align-items:flex-start;color:#c3cad6}
+  .feat .ck{flex:0 0 auto;width:18px;height:18px;border-radius:5px;background:color-mix(in srgb,var(--blue) 16%,transparent);color:var(--blue-bright);display:grid;place-items:center;font-size:11px;font-weight:700;margin-top:2px;font-family:'JetBrains Mono',monospace}
+  .plan.featured .feat .ck{background:var(--blue);color:#fff}
+  .plan .btn{width:100%}
+  .price-note{text-align:center;margin-top:32px;color:var(--muted);font-size:15px;font-family:'JetBrains Mono',monospace}
+  .price-note a{color:var(--blue-bright);text-decoration:underline}
+
+  /* CONTACT */
+  .contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:start}
+  .contact h2{font-size:clamp(30px,4.2vw,52px);font-weight:600;letter-spacing:-0.02em;margin:16px 0 18px}
+  .contact h2 .g{color:var(--blue-bright)}
+  .contact-lead{color:var(--muted);font-size:17px;max-width:42ch;margin-bottom:32px}
+  .cmeta{display:grid;gap:14px;font-family:'JetBrains Mono',monospace}
+  .cm{display:flex;gap:13px;align-items:center;font-size:14px}
+  .cm .ic{width:40px;height:40px;border-radius:9px;background:var(--panel);border:1px solid var(--line-2);display:grid;place-items:center;color:var(--blue-bright);flex:0 0 auto}
+  form{display:grid;gap:18px;background:var(--panel);border:1px solid var(--line-2);border-radius:14px;padding:34px}
+  .field{display:grid;gap:8px}
+  .field label{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.04em;color:var(--muted);text-transform:uppercase}
+  .field input,.field textarea,.field select{background:var(--bg);border:1px solid var(--line-2);border-radius:8px;padding:13px 14px;font-family:var(--font-body);font-size:15px;color:var(--ink);transition:.15s}
+  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px color-mix(in srgb,var(--blue) 18%,transparent)}
+  .field textarea{resize:vertical;min-height:104px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .captcha{display:flex;align-items:center;gap:13px;background:var(--bg);border:1px solid var(--line-2);border-radius:8px;padding:11px 14px}
+  .captcha .q{font-family:'JetBrains Mono',monospace;font-size:14px;white-space:nowrap;color:var(--muted)}
+  .captcha .q b{color:var(--blue-bright);font-size:16px}
+  .captcha input{flex:1;background:var(--panel-2);border:1px solid var(--line-2);border-radius:7px;padding:10px 12px;font-size:15px;font-weight:600;color:var(--ink);font-family:'JetBrains Mono',monospace}
+  .captcha input:focus{outline:none;border-color:var(--blue)}
+  .captcha .refresh{background:none;border:0;color:var(--muted);cursor:pointer;font-size:17px}
+  .captcha .refresh:hover{color:var(--blue-bright)}
+  .form-msg{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;min-height:18px}
+  .form-msg.err{color:#f87171}
+  .form-msg.ok{color:#4ade80}
+  .success{display:none;text-align:center;padding:50px 22px;background:var(--panel);border:1px solid var(--blue);border-radius:14px}
+  .success.show{display:block}
+  .success .tick{width:62px;height:62px;border-radius:14px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:28px;margin:0 auto 18px;box-shadow:0 0 30px -4px var(--blue)}
+  .success h3{font-size:26px;font-weight:600;margin-bottom:10px}
+  .success p{color:var(--muted)}
+
+  footer{border-top:1px solid var(--line);padding:38px 0}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+  .foot small{color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:13px}
+
+  /* --- theme / tweak variants --- */
+  body[data-theme="black"]{--bg:#000000;--panel:#0a0a0c;--panel-2:#111114;--line:#17171b;--line-2:#26262c}
+  body[data-theme="navy"]{--bg:#080d1a;--panel:#0d1424;--panel-2:#121b30;--line:#162338;--line-2:#243350}
+  body[data-grid="off"]{background-image:none}
+  a.cm{transition:.15s}
+  a.cm:hover{color:var(--blue-bright)}
+  body[data-sharp="on"] .btn,
+  body[data-sharp="on"] .svc,
+  body[data-sharp="on"] .plan,
+  body[data-sharp="on"] .panel-card,
+  body[data-sharp="on"] .terminal,
+  body[data-sharp="on"] .term-bar,
+  body[data-sharp="on"] form,
+  body[data-sharp="on"] .field input,
+  body[data-sharp="on"] .field textarea,
+  body[data-sharp="on"] .field select,
+  body[data-sharp="on"] .captcha,
+  body[data-sharp="on"] .captcha input,
+  body[data-sharp="on"] .feat .ck,
+  body[data-sharp="on"] .cm .ic,
+  body[data-sharp="on"] .pc-row .lab .i,
+  body[data-sharp="on"] .success,
+  body[data-sharp="on"] .success .tick,
+  body[data-sharp="on"] .pin,
+  body[data-sharp="on"] .statcard,
+  body[data-sharp="on"] .rchip{border-radius:2px !important}
+
+  @media(max-width:880px){
+    .nav-links{display:none}
+    .nav-toggle{display:flex}
+    .nav.open .nav-links{display:flex;position:absolute;top:70px;left:0;right:0;background:var(--bg);flex-direction:column;align-items:flex-start;gap:0;padding:8px 32px 22px;border-bottom:1px solid var(--line)}
+    .nav.open .nav-links a{padding:13px 0;width:100%;border-bottom:1px solid var(--line)}
+    .svc-grid{grid-template-columns:1fr}
+    .why-grid{grid-template-columns:1fr;gap:40px}
+    .price-grid{grid-template-columns:1fr;gap:30px}
+    .contact-grid{grid-template-columns:1fr;gap:38px}
+  }
+  @media(max-width:520px){
+    .wrap{padding:0 20px}
+    .two{grid-template-columns:1fr}
+    form{padding:24px}
+    section{padding:64px 0}
+    .term-body{font-size:12.5px}
+    .spark{display:none}
+  }
+</style>
+
+<!-- Structured data: ProfessionalService -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "SparkPlug SEO",
+  "description": "Solo SEO & AI Search specialist offering technical SEO, indexing fixes, content and strategy for small businesses and professionals.",
+  "url": "https://sparkplugseo.com/",
+  "email": "jessie@sparkplugseo.com",
+  "founder": { "@type": "Person", "name": "Jessica Schmukler", "sameAs": "https://www.linkedin.com/in/technicalseo/" },
+  "areaServed": ["US", "GB", "PR", "MX", "AR"],
+  "address": { "@type": "PostalAddress", "addressLocality": "Buenos Aires", "addressCountry": "AR" },
+  "priceRange": "$300–$1500/mo",
+  "makesOffer": [
+    { "@type": "Offer", "name": "Foundations", "price": "300", "priceCurrency": "USD", "description": "Technical SEO audit, indexing fixes, tracking, monthly report." },
+    { "@type": "Offer", "name": "Growth", "price": "500", "priceCurrency": "USD", "description": "Foundations plus keyword & content strategy, on-page optimisation, online stats dashboard." },
+    { "@type": "Offer", "name": "Authority", "price": "1500", "priceCurrency": "USD", "description": "Growth plus full content production, advanced technical SEO, interlinking & pruning, monthly call." }
+  ]
+}
+</script>
+</head>
+<body data-theme="black" data-grid="off">
+<header>
+  <div class="wrap">
+    <nav class="nav" id="nav">
+      <a class="brand" href="#top"><span class="sq">JS</span>Jessica Schmukler</a>
+      <div class="nav-links">
+        <a href="#services">services</a>
+        <a href="#why">why_me</a>
+        <a href="#pricing">pricing</a>
+        <a href="#contact" class="btn btn-primary">Book a call</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-inner">
+        <span class="spark s1" aria-hidden="true">✦</span>
+        <span class="spark s2" aria-hidden="true">✦</span>
+        <span class="spark s3" aria-hidden="true">✦</span>
+        <span class="eyebrow">No generalists here · Solo SEO &amp; AI Search Specialist · Buenos Aires, AR</span>
+        <h1>Just a damn good <span class="mark">SEO &amp; AI Search</span> Specialist.</h1>
+        <p class="lead">I'm a solo SEO specialist for small businesses and professionals. I fix what's broken under the hood, get your pages indexed, and build the content and strategy that gets you found in Google — and in AI search.</p>
+        <div class="hero-cta">
+          <a href="#pricing" class="btn btn-primary">View pricing</a>
+        </div>
+      </div>
+      <div class="statcard">
+        <div class="sc-head">
+          <span class="sc-tag">// by the numbers</span>
+          <span class="sc-live"><span class="d"></span>across 5 markets</span>
+        </div>
+        <div class="sc-main">
+          <div class="sc-num">200<span class="plus">+</span></div>
+          <div class="sc-cap">businesses helped get found in Google &amp; AI search</div>
+        </div>
+        <div class="sc-regions">
+          <span class="rchip">US</span>
+          <span class="rchip">UK</span>
+          <span class="rchip">PR</span>
+          <span class="rchip">MX</span>
+          <span class="rchip">AR</span>
+          <span class="rnote">one specialist, five regions</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">// what i do</span>
+        <h2>Four levers I pull to grow organic traffic</h2>
+        <p>No bloated retainers, no junior hand-offs. Every engagement is built around what actually moves your rankings.</p>
+      </div>
+      <div class="svc-grid">
+        <div class="svc"><div class="tag">01 / technical</div><h3>Technical SEO</h3><p>Audits, site architecture, Core Web Vitals, schema and the under-the-hood fixes that earn Google's trust.</p></div>
+        <div class="svc"><div class="tag">02 / indexing</div><h3>Indexing &amp; Crawl</h3><p>Pages not showing up? I diagnose crawl, indexing and canonical issues so your content can actually rank.</p></div>
+        <div class="svc"><div class="tag">03 / content</div><h3>Content &amp; On-Page</h3><p>Keyword-led briefs and on-page optimisation that match search intent and read like a human wrote them.</p></div>
+        <div class="svc"><div class="tag">04 / strategy</div><h3>SEO &amp; AI Search Strategy</h3><p>A prioritised roadmap that grows your visibility in Google and AI search — ChatGPT, Perplexity, AI Overviews — so every month compounds the last.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section id="why">
+    <div class="wrap">
+      <div class="why-grid">
+        <div>
+          <span class="eyebrow">// why a solo specialist</span>
+          <h2>You hire me. You <span class="g">get</span> me.</h2>
+          <p>Agencies sell you a senior in the pitch and hand you a junior after the contract. <b>I'm the only person on your account</b> — strategy, execution and reporting, from one pair of hands that owns the outcome.</p>
+          <p>Lean overhead means honest pricing, faster decisions and total transparency. You always know what's being worked on and why it matters for your bottom line.</p>
+          <a href="#contact" class="btn btn-ghost" style="margin-top:8px">Talk to me directly →</a>
+        </div>
+        <div class="panel-card">
+          <div class="pc-row"><div class="lab"><span class="i">01</span>Direct access, zero hand-offs</div><div class="val"><span class="d"></span>always</div></div>
+          <div class="pc-row"><div class="lab"><span class="i">02</span>Senior-level on every task</div><div class="val"><span class="d"></span>guaranteed</div></div>
+          <div class="pc-row"><div class="lab"><span class="i">03</span>Reporting tied to outcomes</div><div class="val"><span class="d"></span>monthly</div></div>
+          <div class="pc-row"><div class="lab"><span class="i">04</span>Month-to-month, no lock-in</div><div class="val"><span class="d"></span>flexible</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="wrap">
+      <div class="sec-head" style="text-align:center;margin-left:auto;margin-right:auto;max-width:60ch">
+        <span class="eyebrow" style="justify-content:center">// pricing</span>
+        <h2 style="margin-left:auto;margin-right:auto">Flat monthly plans, in USD</h2>
+        <p style="margin-left:auto;margin-right:auto">No setup fees, no long lock-in — cancel anytime with 30 days' notice.</p>
+      </div>
+      <div class="price-grid">
+        <div class="plan">
+          <div class="pname">Foundations</div>
+          <div class="pfor">For small businesses getting their SEO right for the first time.</div>
+          <div class="price"><span class="cur">$</span><span class="amt">300</span><span class="per">/mo</span></div>
+          <hr/>
+          <ul class="feat">
+            <li><span class="ck">✓</span>Full technical SEO audit + priority fixes</li>
+            <li><span class="ck">✓</span>Indexing &amp; crawl issue resolution</li>
+            <li><span class="ck">✓</span>Search Console + GA4 setup &amp; tracking</li>
+            <li><span class="ck">✓</span>Keyword foundation &amp; on-page basics</li>
+            <li><span class="ck">✓</span>Monthly performance report</li>
+            <li><span class="ck">✓</span>Email support</li>
+            <li><span class="ck">✓</span>Platform support: WordPress</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost">Choose Foundations</a>
+        </div>
+        <div class="plan featured">
+          <span class="pin">most popular</span>
+          <div class="pname">Growth</div>
+          <div class="pfor">For businesses ready to rank consistently and compound results.</div>
+          <div class="price"><span class="cur">$</span><span class="amt">500</span><span class="per">/mo</span></div>
+          <hr/>
+          <ul class="feat">
+            <li><span class="ck">✓</span>Everything in Foundations</li>
+            <li><span class="ck">✓</span>Keyword &amp; content strategy roadmap</li>
+            <li><span class="ck">✓</span>Online stats dashboard</li>
+            <li><span class="ck">✓</span>Ongoing on-page optimisation</li>
+            <li><span class="ck">✓</span>Competitor monitoring</li>
+            <li><span class="ck">✓</span>Platform support: WordPress</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Choose Growth</a>
+        </div>
+        <div class="plan">
+          <div class="pname">Authority</div>
+          <div class="pfor">For professionals serious about owning their niche in search.</div>
+          <div class="price"><span class="cur">$</span><span class="amt">1500</span><span class="per">/mo</span></div>
+          <hr/>
+          <ul class="feat">
+            <li><span class="ck">✓</span>Everything in Growth</li>
+            <li><span class="ck">✓</span>Full content production — 4 pieces / month</li>
+            <li><span class="ck">✓</span>Interlinking &amp; pruning</li>
+            <li><span class="ck">✓</span>Advanced technical SEO &amp; architecture</li>
+            <li><span class="ck">✓</span>Monthly strategy call</li>
+            <li><span class="ck">✓</span>Direct Slack access</li>
+            <li><span class="ck">✓</span>Priority turnaround on everything</li>
+            <li><span class="ck">✓</span>Platform support: WordPress, Shopify &amp; custom CMS</li>
+          </ul>
+          <a href="#contact" class="btn btn-ghost">Choose Authority</a>
+        </div>
+      </div>
+      <p class="price-note">Not sure which fits? <a href="#contact">tell me about your site</a> — I'll recommend the right plan.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div>
+          <span class="eyebrow">// let's talk</span>
+          <h2>Start a <span class="g">conversation</span></h2>
+          <p class="contact-lead">Tell me about your business and what you're trying to rank for. I reply to every serious enquiry within one business day.</p>
+          <div class="cmeta">
+            <a class="cm" href="mailto:jessie@sparkplugseo.com"><span class="ic">✉</span>jessie@sparkplugseo.com</a>
+            <a class="cm" href="https://www.linkedin.com/in/technicalseo/" target="_blank" rel="noopener"><span class="ic">in</span>linkedin.com/in/technicalseo</a>
+            <div class="cm"><span class="ic">◷</span>Buenos Aires, Argentina · worldwide</div>
+          </div>
+        </div>
+        <div>
+          <!-- Web3Forms: replace YOUR_WEB3FORMS_ACCESS_KEY with the key from web3forms.com -->
+          <form id="seoForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+            <input type="hidden" name="subject" value="New enquiry from sparkplugseo.com" />
+            <input type="hidden" name="from_name" value="SparkPlug SEO website" />
+            <!-- Honeypot: bots fill this, humans never see it -->
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
+            <div class="two">
+              <div class="field"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Jane Smith" /></div>
+              <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="jane@company.com" /></div>
+            </div>
+            <div class="two">
+              <div class="field"><label for="company">Company / Website</label><input id="company" name="company" type="text" placeholder="company.com" /></div>
+              <div class="field"><label for="budget">Plan of interest</label>
+                <select id="budget" name="plan">
+                  <option value="">Not sure yet</option>
+                  <option>Foundations — $300/mo</option>
+                  <option>Growth — $500/mo</option>
+                  <option>Authority — $1500/mo</option>
+                </select>
+              </div>
+            </div>
+            <div class="field"><label for="msg">What do you need help with?</label><textarea id="msg" name="message" placeholder="We launched 6 months ago and aren't ranking for anything..."></textarea></div>
+            <div class="field">
+              <label>Anti-spam check</label>
+              <div class="captcha">
+                <span class="q">verify: <b id="capA">0</b> + <b id="capB">0</b> =</span>
+                <input id="capInput" type="text" inputmode="numeric" placeholder="?" autocomplete="off" />
+                <button type="button" class="refresh" id="capRefresh" aria-label="New question">↻</button>
+              </div>
+            </div>
+            <!-- Cloudflare Turnstile: replace YOUR_TURNSTILE_SITE_KEY with the site key from the Turnstile dashboard.
+                 Web3Forms verifies this token server-side automatically. -->
+            <div class="cf-turnstile" data-sitekey="YOUR_TURNSTILE_SITE_KEY" data-theme="dark"></div>
+            <div class="form-msg" id="formMsg"></div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Send enquiry →</button>
+          </form>
+          <div class="success" id="success">
+            <div class="tick">✓</div>
+            <h3>Message sent</h3>
+            <p>Thanks — I'll be in touch within one business day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="brand" href="#top"><span class="sq">JS</span>Jessica Schmukler</a>
+      <small>SEO &amp; AI Search Specialist · Buenos Aires, Argentina · © 2026</small>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var nav=document.getElementById('nav');
+  document.getElementById('navToggle').addEventListener('click',function(){nav.classList.toggle('open')});
+  nav.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open')})});
+
+  var capA=document.getElementById('capA'),capB=document.getElementById('capB'),answer=0;
+  function newCaptcha(){var a=Math.floor(Math.random()*9)+1,b=Math.floor(Math.random()*9)+1;capA.textContent=a;capB.textContent=b;answer=a+b;}
+  newCaptcha();
+  document.getElementById('capRefresh').addEventListener('click',function(){newCaptcha();document.getElementById('capInput').value='';});
+
+  var form=document.getElementById('seoForm');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var msg=document.getElementById('formMsg');
+    var name=document.getElementById('name').value.trim();
+    var email=document.getElementById('email').value.trim();
+    var cap=document.getElementById('capInput').value.trim();
+    msg.className='form-msg';
+    if(!name||!email){msg.textContent='> error: name and email required';msg.classList.add('err');return;}
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){msg.textContent='> error: invalid email';msg.classList.add('err');return;}
+    if(parseInt(cap,10)!==answer){msg.textContent='> error: captcha incorrect';msg.classList.add('err');newCaptcha();document.getElementById('capInput').value='';return;}
+
+    msg.textContent='> sending...';msg.classList.add('ok');
+    var data=new FormData(form);
+    fetch('https://api.web3forms.com/submit',{method:'POST',body:data,headers:{'Accept':'application/json'}})
+      .then(function(r){return r.json();})
+      .then(function(json){
+        if(json.success){
+          form.style.display='none';
+          document.getElementById('success').classList.add('show');
+        }else{
+          msg.className='form-msg err';
+          msg.textContent='> error: '+(json.message||'could not send, email me directly');
+        }
+      })
+      .catch(function(){
+        msg.className='form-msg err';
+        msg.textContent='> error: network issue — please email jessie@sparkplugseo.com';
+      });
+  });
+</script>
+</body>
+</html>
