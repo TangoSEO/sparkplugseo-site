@@ -231,7 +231,7 @@
   .foot small a{color:var(--blue-bright);text-decoration:underline;text-underline-offset:2px}
   .foot small a:hover{color:#fff}
 
-  /* --- LIGHT SECTIONS (alternating bands, StudioHawk-style) --- */
+  /* --- LIGHT SECTIONS (floating sheets on the dark ground) --- */
   section.light{
     --panel:#ffffff;
     --panel-2:#eef1f6;
@@ -241,19 +241,14 @@
     --line-2:#d6dce6;
     --bg:#ffffff;
     --light-bg:#f4f6fa;
-    --st:var(--dark-bg);--stm:color-mix(in srgb,var(--blue) 16%, var(--dark-bg));
-    --sb:var(--dark-bg);--sbm:color-mix(in srgb,var(--blue) 16%, var(--dark-bg));
     position:relative;
-    background:linear-gradient(to bottom,
-      var(--st) 0,
-      var(--stm) 38px,
-      var(--light-bg) 96px,
-      var(--light-bg) calc(100% - 96px),
-      var(--sbm) calc(100% - 38px),
-      var(--sb) 100%);
+    background:var(--light-bg);
     color:var(--ink);
-    padding-top:118px;
-    padding-bottom:118px;
+    width:min(1320px,calc(100% - 48px));
+    margin:0 auto;
+    border-radius:28px;
+    padding-top:96px;
+    padding-bottom:96px;
   }
   section.light > .wrap{position:relative;z-index:2}
   section.light .eyebrow,
@@ -308,6 +303,7 @@
     .two{grid-template-columns:1fr}
     form{padding:24px}
     section{padding:64px 0}
+    section.light{width:calc(100% - 24px);border-radius:20px;padding-top:56px;padding-bottom:56px}
     .spark{display:none}
     .hero{padding:60px 0 48px}
     .hero p.lead{font-size:19px;line-height:1.5}
