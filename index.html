@@ -33,7 +33,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L3T4ENX8ZD"></script>
@@ -45,12 +45,8 @@
 </script>
 
 <style>
-  /* Headings use Hanken Grotesk (open-source, SIL OFL) by default, a close match to Degular.
-     Degular is commercial; if you license it, host the .woff2 files and uncomment to switch automatically:
-  @font-face{font-family:'Degular';src:url('fonts/Degular-Medium.woff2') format('woff2');font-weight:500;font-display:swap}
-  @font-face{font-family:'Degular';src:url('fonts/Degular-Semibold.woff2') format('woff2');font-weight:600;font-display:swap}
-  @font-face{font-family:'Degular';src:url('fonts/Degular-Bold.woff2') format('woff2');font-weight:700;font-display:swap}
-  */
+  /* Display face: Instrument Serif (regular + italic only, no bold weights exist).
+     Body: Archivo. Labels: JetBrains Mono. */
   :root{
     --bg:#0a0c10;
     --panel:#0f1218;
@@ -64,7 +60,7 @@
     --maxw:1200px;
     --dark-bg:#0a0c10;
     --font-body:'Archivo',sans-serif;
-    --font-display:'Degular','Hanken Grotesk',sans-serif;
+    --font-display:'Instrument Serif',Georgia,serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -87,10 +83,10 @@
   .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
   .brand{display:flex;align-items:center;gap:9px;line-height:1}
   .brand-mark{width:30px;height:30px;flex:0 0 auto;filter:drop-shadow(0 0 14px color-mix(in srgb,var(--blue) 45%,transparent))}
-  .brand-word{font-family:var(--font-display);font-weight:800;font-size:21px;letter-spacing:-0.02em;color:var(--ink)}
+  .brand-word{font-family:var(--font-body);font-weight:800;font-size:21px;letter-spacing:-0.02em;color:var(--ink)}
   .brand-word .bp{color:var(--blue-bright)}
   .brand-chip{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:11px;letter-spacing:0.1em;color:#fff;background:var(--blue);border-radius:6px;padding:3px 7px;box-shadow:0 0 0 1px color-mix(in srgb,var(--blue) 40%,transparent)}
-  .nav-links{display:flex;align-items:center;gap:32px;font-size:14px;font-weight:500;font-family:'JetBrains Mono',monospace}
+  .nav-links{display:flex;align-items:center;gap:32px;font-size:14.5px;font-weight:500;font-family:var(--font-body)}
   .nav-links a:not(.btn):hover{color:var(--blue-bright)}
   .nav-toggle{display:none;background:none;border:0;flex-direction:column;gap:5px;cursor:pointer}
   .nav-toggle span{width:24px;height:2px;background:var(--ink);display:block}
@@ -98,7 +94,7 @@
   /* HERO */
   .hero{padding:90px 0 70px;position:relative}
   .hero-inner{max-width:880px;position:relative}
-  .hero h1{font-size:clamp(42px,6.6vw,82px);font-weight:600;line-height:0.98;letter-spacing:-0.025em;margin:24px 0}
+  .hero h1{font-size:clamp(44px,6.8vw,86px);font-weight:400;line-height:1.02;letter-spacing:-0.012em;margin:24px 0}
   .hero h1 .g{color:var(--blue-bright)}
   .hero h1 .mark{display:inline-block;white-space:nowrap;background:var(--blue);color:#fff;padding:0 .14em;border-radius:12px;transform:rotate(-2deg);box-shadow:0 12px 38px -12px color-mix(in srgb,var(--blue) 78%,transparent)}
   .spark{position:absolute;color:var(--blue-bright);pointer-events:none;opacity:.55;line-height:1;z-index:2}
@@ -112,12 +108,11 @@
   .sc-live{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px}
   .sc-live .d{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 10px #4ade80}
   .sc-main{display:flex;align-items:center;gap:18px;margin:12px 0 18px;flex-wrap:wrap}
-  .sc-num{font-family:var(--font-display);font-size:clamp(44px,6vw,72px);font-weight:700;line-height:.85;letter-spacing:-.03em;color:var(--blue-bright)}
+  .sc-num{font-family:var(--font-display);font-size:clamp(44px,6vw,72px);font-weight:400;line-height:.85;letter-spacing:-.01em;color:var(--blue-bright)}
   .sc-num .plus{color:var(--blue)}
   .sc-cap{font-size:15.5px;color:#c3cad6;max-width:18ch;font-weight:500}
   .sc-regions{display:flex;align-items:center;gap:9px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}
-  .rchip{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.04em;color:#dfe4ec;background:var(--panel-2);border:1px solid var(--line-2);border-radius:9px;padding:7px 13px;transition:.16s}
-  .rchip:hover{border-color:var(--blue);color:#fff;transform:translateY(-2px) rotate(-3deg)}
+  .rline{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.08em;color:#8b94a3}
   .rnote{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-left:auto}
   @media (prefers-reduced-motion: no-preference){
     .hero h1 .mark{animation:markPop .55s .15s cubic-bezier(.2,.9,.25,1) both}
@@ -141,9 +136,9 @@
   .term-body .ok{color:#4ade80}
   .term-body .v{color:var(--ink)}
 
-  section{padding:92px 0;position:relative}
+  section{padding:104px 0;position:relative}
   .sec-head{margin-bottom:52px}
-  .sec-head h2{font-size:clamp(30px,4.4vw,52px);font-weight:600;letter-spacing:-0.02em;line-height:0.88;margin-top:16px;max-width:20ch}
+  .sec-head h2{font-size:clamp(32px,4.6vw,54px);font-weight:400;letter-spacing:-0.01em;line-height:1;margin-top:16px;max-width:20ch}
   .sec-head p{color:var(--muted);font-size:17px;margin-top:14px;max-width:56ch}
 
   /* SERVICES */
@@ -152,13 +147,12 @@
   .svc::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--blue),transparent);opacity:0;transition:.2s}
   .svc:hover{border-color:var(--blue);background:var(--panel-2)}
   .svc:hover::before{opacity:1}
-  .svc .tag{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--blue-bright);letter-spacing:0.04em}
-  .svc h3{font-size:23px;font-weight:600;margin:14px 0 10px}
+  .svc h3{font-size:25px;font-weight:400;margin:0 0 10px}
   .svc p{color:var(--muted);font-size:15px}
 
   /* WHY / metrics */
   .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-  .why h2{font-size:clamp(30px,4vw,50px);font-weight:600;letter-spacing:-0.02em;line-height:0.9;margin:16px 0 22px}
+  .why h2{font-size:clamp(32px,4.2vw,52px);font-weight:400;letter-spacing:-0.01em;line-height:1;margin:16px 0 22px}
   .why h2 .g{color:var(--blue-bright)}
   .why p{color:var(--muted);font-size:17px;margin-bottom:18px;max-width:52ch}
   .why p b{color:var(--ink);font-weight:600}
@@ -178,7 +172,7 @@
   .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
   .plan{background:var(--panel);border:1px solid var(--line-2);border-radius:14px;padding:32px 28px;display:flex;flex-direction:column;position:relative}
   .plan.featured{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue),0 30px 70px -40px color-mix(in srgb,var(--blue) 60%,transparent);background:linear-gradient(180deg,color-mix(in srgb,var(--blue) 8%,transparent),transparent)}
-  .plan .pin{position:absolute;top:-11px;left:28px;background:var(--blue);color:#fff;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:5px 11px;border-radius:6px}
+  .plan .pin{position:absolute;top:-13px;left:28px;background:#fff;color:var(--blue);border:1px solid color-mix(in srgb,var(--blue) 35%,transparent);font-family:var(--font-body);font-size:12px;font-weight:600;letter-spacing:0;padding:5px 12px;border-radius:999px;box-shadow:0 2px 8px rgba(13,17,23,.06)}
   .plan .pname{font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:var(--blue-bright)}
   .plan .pfor{font-size:14px;color:var(--muted);margin-top:12px;min-height:44px}
   .plan .price{display:flex;align-items:baseline;gap:4px;margin:18px 0 4px}
@@ -196,7 +190,7 @@
 
   /* CONTACT */
   .contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:56px;align-items:start}
-  .contact h2{font-size:clamp(30px,4.2vw,52px);font-weight:600;letter-spacing:-0.02em;line-height:0.9;margin:16px 0 18px}
+  .contact h2{font-size:clamp(32px,4.4vw,54px);font-weight:400;letter-spacing:-0.01em;line-height:1;margin:16px 0 18px}
   .contact h2 .g{color:var(--blue-bright)}
   .contact-lead{color:var(--muted);font-size:17px;max-width:42ch;margin-bottom:32px}
   .cmeta{display:grid;gap:14px;font-family:'JetBrains Mono',monospace}
@@ -209,20 +203,13 @@
   .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px color-mix(in srgb,var(--blue) 18%,transparent)}
   .field textarea{resize:vertical;min-height:104px}
   .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  .captcha{display:flex;align-items:center;gap:13px;background:var(--bg);border:1px solid var(--line-2);border-radius:8px;padding:11px 14px}
-  .captcha .q{font-family:'JetBrains Mono',monospace;font-size:14px;white-space:nowrap;color:var(--muted)}
-  .captcha .q b{color:var(--blue-bright);font-size:16px}
-  .captcha input{flex:1;background:var(--panel-2);border:1px solid var(--line-2);border-radius:7px;padding:10px 12px;font-size:15px;font-weight:600;color:var(--ink);font-family:'JetBrains Mono',monospace}
-  .captcha input:focus{outline:none;border-color:var(--blue)}
-  .captcha .refresh{background:none;border:0;color:var(--muted);cursor:pointer;font-size:17px}
-  .captcha .refresh:hover{color:var(--blue-bright)}
   .form-msg{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;min-height:18px}
   .form-msg.err{color:#f87171}
   .form-msg.ok{color:#4ade80}
   .success{display:none;text-align:center;padding:50px 22px;background:var(--panel);border:1px solid var(--blue);border-radius:14px}
   .success.show{display:block}
   .success .tick{width:62px;height:62px;border-radius:14px;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:28px;margin:0 auto 18px;box-shadow:0 0 30px -4px var(--blue)}
-  .success h3{font-size:26px;font-weight:600;margin-bottom:10px}
+  .success h3{font-size:28px;font-weight:400;margin-bottom:10px}
   .success p{color:var(--muted)}
 
   footer{border-top:1px solid var(--line);padding:38px 0}
@@ -252,7 +239,6 @@
   }
   section.light > .wrap{position:relative;z-index:2}
   section.light .eyebrow,
-  section.light .svc .tag,
   section.light .plan .pname,
   section.light .plan .price .per,
   section.light .price-note a{color:var(--blue)}
@@ -277,16 +263,13 @@
   body[data-sharp="on"] .field input,
   body[data-sharp="on"] .field textarea,
   body[data-sharp="on"] .field select,
-  body[data-sharp="on"] .captcha,
-  body[data-sharp="on"] .captcha input,
   body[data-sharp="on"] .feat .ck,
   body[data-sharp="on"] .cm .ic,
   body[data-sharp="on"] .pc-row .lab .i,
   body[data-sharp="on"] .success,
   body[data-sharp="on"] .success .tick,
   body[data-sharp="on"] .pin,
-  body[data-sharp="on"] .statcard,
-  body[data-sharp="on"] .rchip{border-radius:2px !important}
+  body[data-sharp="on"] .statcard{border-radius:2px !important}
 
   @media(max-width:880px){
     .nav-links{display:none}
@@ -321,9 +304,6 @@
     .field label{font-size:13px}
     .field input,.field textarea,.field select{font-size:16px;padding:15px 15px}
     .btn{font-size:16px;padding:15px 22px}
-    .captcha{flex-wrap:wrap;gap:10px}
-    .captcha .q{font-size:15px}
-    .captcha input{font-size:16px;flex:1 1 120px;min-width:0}
     .statcard{padding:22px 20px}
     .sc-cap{font-size:16px}
   }
@@ -362,9 +342,9 @@
         <span class="brand-chip">SEO</span>
       </a>
       <div class="nav-links">
-        <a href="#services">services</a>
-        <a href="#why">why_me</a>
-        <a href="#pricing">pricing</a>
+        <a href="#services">Services</a>
+        <a href="#why">Why me</a>
+        <a href="#pricing">Pricing</a>
         <a href="#contact" class="btn btn-primary">Book a call</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -381,7 +361,7 @@
         <span class="spark s2" aria-hidden="true">✦</span>
         <span class="spark s3" aria-hidden="true">✦</span>
         <span class="eyebrow">No generalists here · Solo SEO &amp; AI Search Specialist · Buenos Aires, AR</span>
-        <h1>Just a damn good <span class="mark">SEO &amp; AI Search</span> Specialist.</h1>
+        <h1>Just a <em>damn good</em> <span class="mark">SEO &amp; AI Search</span> Specialist.</h1>
         <p class="lead">I get small businesses found, on Google and in AI search. One expert. No agency, no fluff, no junior doing the real work.</p>
         <div class="hero-cta">
           <a href="#pricing" class="btn btn-primary">View pricing</a>
@@ -397,11 +377,7 @@
           <div class="sc-cap">businesses helped get found in Google &amp; AI search</div>
         </div>
         <div class="sc-regions">
-          <span class="rchip">US</span>
-          <span class="rchip">UK</span>
-          <span class="rchip">PR</span>
-          <span class="rchip">MX</span>
-          <span class="rchip">AR</span>
+          <span class="rline">US · UK · PR · MX · AR</span>
           <span class="rnote">one specialist, five regions</span>
         </div>
       </div>
@@ -417,10 +393,10 @@
         <p>No bloated retainers. No junior hand-offs. Just the work that moves rankings.</p>
       </div>
       <div class="svc-grid">
-        <div class="svc"><div class="tag">01 / technical</div><h3>Technical SEO</h3><p>Audits, site speed, schema, the under-the-hood fixes that earn Google's trust.</p></div>
-        <div class="svc"><div class="tag">02 / indexing</div><h3>Indexing &amp; Crawl</h3><p>Pages not showing up? I find why, and fix it, so they rank.</p></div>
-        <div class="svc"><div class="tag">03 / content</div><h3>Content &amp; On-Page</h3><p>Briefs and on-page work that match what people search, written for humans.</p></div>
-        <div class="svc"><div class="tag">04 / strategy</div><h3>SEO &amp; AI Search Strategy</h3><p>A clear plan to get you seen in Google and AI search, ChatGPT, Perplexity, AI Overviews. Every month builds on the last.</p></div>
+        <div class="svc"><h3>Technical SEO</h3><p>Audits, site speed, schema, the under-the-hood fixes that earn Google's trust.</p></div>
+        <div class="svc"><h3>Indexing &amp; Crawl</h3><p>Pages not showing up? I find why, and fix it, so they rank.</p></div>
+        <div class="svc"><h3>Content &amp; On-Page</h3><p>Briefs and on-page work that match what people search, written for humans.</p></div>
+        <div class="svc"><h3>SEO &amp; AI Search Strategy</h3><p>A clear plan to get you seen in Google and AI search, ChatGPT, Perplexity, AI Overviews. Every month builds on the last.</p></div>
       </div>
     </div>
   </section>
@@ -473,7 +449,7 @@
           <a href="#contact" class="btn btn-ghost">Choose Foundations</a>
         </div>
         <div class="plan featured">
-          <span class="pin">most popular</span>
+          <span class="pin">Most clients start here</span>
           <div class="pname">Growth</div>
           <div class="pfor">For businesses ready to rank consistently and compound results.</div>
           <div class="price"><span class="cur">$</span><span class="amt">500</span><span class="per">/mo</span></div>
@@ -547,14 +523,6 @@
               </div>
             </div>
             <div class="field"><label for="msg">What do you need help with?</label><textarea id="msg" name="message" placeholder="We launched 6 months ago and aren't ranking for anything..."></textarea></div>
-            <div class="field">
-              <label>Anti-spam check</label>
-              <div class="captcha">
-                <span class="q">verify: <b id="capA">0</b> + <b id="capB">0</b> =</span>
-                <input id="capInput" type="text" inputmode="numeric" placeholder="?" autocomplete="off" />
-                <button type="button" class="refresh" id="capRefresh" aria-label="New question">↻</button>
-              </div>
-            </div>
             <div class="form-msg" id="formMsg"></div>
             <button type="submit" class="btn btn-primary" style="width:100%">Send enquiry →</button>
           </form>
@@ -587,22 +555,15 @@
   document.getElementById('navToggle').addEventListener('click',function(){nav.classList.toggle('open')});
   nav.querySelectorAll('.nav-links a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open')})});
 
-  var capA=document.getElementById('capA'),capB=document.getElementById('capB'),answer=0;
-  function newCaptcha(){var a=Math.floor(Math.random()*9)+1,b=Math.floor(Math.random()*9)+1;capA.textContent=a;capB.textContent=b;answer=a+b;}
-  newCaptcha();
-  document.getElementById('capRefresh').addEventListener('click',function(){newCaptcha();document.getElementById('capInput').value='';});
-
   var form=document.getElementById('seoForm');
   form.addEventListener('submit',function(e){
     e.preventDefault();
     var msg=document.getElementById('formMsg');
     var name=document.getElementById('name').value.trim();
     var email=document.getElementById('email').value.trim();
-    var cap=document.getElementById('capInput').value.trim();
     msg.className='form-msg';
     if(!name||!email){msg.textContent='> error: name and email required';msg.classList.add('err');return;}
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){msg.textContent='> error: invalid email';msg.classList.add('err');return;}
-    if(parseInt(cap,10)!==answer){msg.textContent='> error: captcha incorrect';msg.classList.add('err');newCaptcha();document.getElementById('capInput').value='';return;}
 
     msg.textContent='> sending...';msg.classList.add('ok');
     var data=new FormData(form);
