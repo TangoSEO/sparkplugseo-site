@@ -158,13 +158,11 @@
   .why .signature .sig-spark{color:color-mix(in srgb,var(--blue-bright) 60%,var(--muted));font-size:12px;flex:0 0 auto}
   .why .signature a{color:color-mix(in srgb,var(--blue-bright) 70%,var(--muted));font-weight:600;text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--blue-bright) 35%,transparent)}
   .why .signature a:hover{color:var(--blue-bright);border-bottom-color:var(--blue-bright)}
-  .panel-card{background:var(--panel);border:1px solid var(--line-2);border-radius:14px;padding:8px}
-  .pc-row{display:flex;align-items:center;justify-content:space-between;padding:18px 20px;border-radius:9px}
-  .pc-row+.pc-row{border-top:1px solid var(--line)}
-  .pc-row .lab{display:flex;align-items:center;gap:13px;font-size:15px;font-weight:500}
-  .pc-row .lab .i{width:34px;height:34px;border-radius:8px;background:var(--panel-2);border:1px solid var(--line-2);display:grid;place-items:center;color:var(--blue-bright);font-family:'JetBrains Mono',monospace;font-size:13px;flex:0 0 auto}
-  .pc-row .val{font-family:'JetBrains Mono',monospace;font-size:13px;color:#4ade80;display:flex;align-items:center;gap:7px}
-  .pc-row .val .d{width:7px;height:7px;border-radius:50%;background:#4ade80;box-shadow:0 0 8px #4ade80}
+  .panel-card{border-top:1px solid var(--line-2)}
+  .pc-row{display:grid;grid-template-columns:44px 1fr auto;align-items:baseline;gap:18px;padding:24px 4px;border-bottom:1px solid var(--line-2)}
+  .pc-row .ln{font-family:var(--font-display);font-style:italic;font-size:30px;line-height:1;color:var(--blue-bright)}
+  .pc-row .lab{font-size:16px;font-weight:500}
+  .pc-row .val{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;color:var(--muted)}
 
   /* PRICING */
   .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
@@ -252,7 +250,6 @@
   a.cm:hover{color:var(--blue-bright)}
   body[data-sharp="on"] .btn,
   body[data-sharp="on"] .plan,
-  body[data-sharp="on"] .panel-card,
   body[data-sharp="on"] .terminal,
   body[data-sharp="on"] .term-bar,
   body[data-sharp="on"] form,
@@ -261,7 +258,6 @@
   body[data-sharp="on"] .field select,
   body[data-sharp="on"] .feat .ck,
   body[data-sharp="on"] .cm .ic,
-  body[data-sharp="on"] .pc-row .lab .i,
   body[data-sharp="on"] .success,
   body[data-sharp="on"] .success .tick,
   body[data-sharp="on"] .pin,
@@ -411,10 +407,10 @@
           <a href="#contact" class="btn btn-ghost" style="margin-top:8px">Talk to me directly →</a>
         </div>
         <div class="panel-card">
-          <div class="pc-row"><div class="lab"><span class="i">01</span>Direct access, zero hand-offs</div><div class="val"><span class="d"></span>always</div></div>
-          <div class="pc-row"><div class="lab"><span class="i">02</span>Senior-level on every task</div><div class="val"><span class="d"></span>guaranteed</div></div>
-          <div class="pc-row"><div class="lab"><span class="i">03</span>Reporting tied to outcomes</div><div class="val"><span class="d"></span>monthly</div></div>
-          <div class="pc-row"><div class="lab"><span class="i">04</span>Month-to-month, no lock-in</div><div class="val"><span class="d"></span>flexible</div></div>
+          <div class="pc-row"><span class="ln" aria-hidden="true">1</span><div class="lab">Direct access, zero hand-offs</div><div class="val">always</div></div>
+          <div class="pc-row"><span class="ln" aria-hidden="true">2</span><div class="lab">Senior-level on every task</div><div class="val">guaranteed</div></div>
+          <div class="pc-row"><span class="ln" aria-hidden="true">3</span><div class="lab">Reporting tied to outcomes</div><div class="val">monthly</div></div>
+          <div class="pc-row"><span class="ln" aria-hidden="true">4</span><div class="lab">Month-to-month, no lock-in</div><div class="val">flexible</div></div>
         </div>
       </div>
     </div>
