@@ -141,14 +141,12 @@
   .sec-head h2{font-size:clamp(32px,4.6vw,54px);font-weight:400;letter-spacing:-0.01em;line-height:1;margin-top:16px;max-width:20ch}
   .sec-head p{color:var(--muted);font-size:17px;margin-top:14px;max-width:56ch}
 
-  /* SERVICES */
-  .svc-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-  .svc{background:var(--panel);border:1px solid var(--line-2);border-radius:12px;padding:30px;transition:.2s;position:relative;overflow:hidden}
-  .svc::before{content:"";position:absolute;top:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,var(--blue),transparent);opacity:0;transition:.2s}
-  .svc:hover{border-color:var(--blue);background:var(--panel-2)}
-  .svc:hover::before{opacity:1}
-  .svc h3{font-size:25px;font-weight:400;margin:0 0 10px}
-  .svc p{color:var(--muted);font-size:15px}
+  /* SERVICES (editorial lever rows) */
+  .svc-grid{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line-2)}
+  .svc{display:grid;grid-template-columns:58px 1fr 1.1fr;gap:12px 32px;align-items:baseline;padding:34px 6px;border-bottom:1px solid var(--line-2)}
+  .svc .ln{font-family:var(--font-display);font-style:italic;font-size:46px;line-height:1;color:var(--blue)}
+  .svc h3{font-size:30px;font-weight:400;margin:0}
+  .svc p{color:var(--muted);font-size:16px;margin:0;max-width:52ch}
 
   /* WHY / metrics */
   .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
@@ -243,7 +241,6 @@
   section.light .plan .price .per,
   section.light .price-note a{color:var(--blue)}
   section.light .feat li{color:#39424f}
-  section.light .svc,
   section.light .plan{box-shadow:0 1px 2px rgba(13,17,23,.04)}
   section.light .plan.featured{box-shadow:0 0 0 1px var(--blue),0 30px 60px -36px color-mix(in srgb,var(--blue) 45%,transparent)}
 
@@ -254,7 +251,6 @@
   a.cm{transition:.15s}
   a.cm:hover{color:var(--blue-bright)}
   body[data-sharp="on"] .btn,
-  body[data-sharp="on"] .svc,
   body[data-sharp="on"] .plan,
   body[data-sharp="on"] .panel-card,
   body[data-sharp="on"] .terminal,
@@ -276,7 +272,8 @@
     .nav-toggle{display:flex}
     .nav.open .nav-links{display:flex;position:absolute;top:70px;left:0;right:0;background:var(--bg);flex-direction:column;align-items:flex-start;gap:0;padding:8px 32px 22px;border-bottom:1px solid var(--line)}
     .nav.open .nav-links a{padding:13px 0;width:100%;border-bottom:1px solid var(--line)}
-    .svc-grid{grid-template-columns:1fr}
+    .svc{grid-template-columns:56px 1fr;gap:8px 18px}
+    .svc p{grid-column:2}
     .why-grid{grid-template-columns:1fr;gap:40px}
     .price-grid{grid-template-columns:1fr;gap:30px}
     .contact-grid{grid-template-columns:1fr;gap:38px}
@@ -291,9 +288,10 @@
     .hero{padding:60px 0 48px}
     .hero p.lead{font-size:19px;line-height:1.5}
     .sec-head p{font-size:18px}
-    .svc{padding:26px}
-    .svc h3{font-size:24px}
-    .svc p{font-size:16.5px}
+    .svc{padding:24px 2px}
+    .svc .ln{font-size:34px}
+    .svc h3{font-size:25px}
+    .svc p{font-size:16px}
     .why p{font-size:18px}
     .pc-row .lab{font-size:15.5px}
     .feat li{font-size:16px}
@@ -392,10 +390,10 @@
         <p>No bloated retainers. No junior hand-offs. Just the work that moves rankings.</p>
       </div>
       <div class="svc-grid">
-        <div class="svc"><h3>Technical SEO</h3><p>Audits, site speed, schema, the under-the-hood fixes that earn Google's trust.</p></div>
-        <div class="svc"><h3>Indexing &amp; Crawl</h3><p>Pages not showing up? I find why, and fix it, so they rank.</p></div>
-        <div class="svc"><h3>Content &amp; On-Page</h3><p>Briefs and on-page work that match what people search, written for humans.</p></div>
-        <div class="svc"><h3>SEO &amp; AI Search Strategy</h3><p>A clear plan to get you seen in Google and AI search, ChatGPT, Perplexity, AI Overviews. Every month builds on the last.</p></div>
+        <div class="svc"><span class="ln" aria-hidden="true">1</span><h3>Technical SEO</h3><p>Audits, site speed, schema, the under-the-hood fixes that earn Google's trust.</p></div>
+        <div class="svc"><span class="ln" aria-hidden="true">2</span><h3>Indexing &amp; Crawl</h3><p>Pages not showing up? I find why, and fix it, so they rank.</p></div>
+        <div class="svc"><span class="ln" aria-hidden="true">3</span><h3>Content &amp; On-Page</h3><p>Briefs and on-page work that match what people search, written for humans.</p></div>
+        <div class="svc"><span class="ln" aria-hidden="true">4</span><h3>SEO &amp; AI Search Strategy</h3><p>A clear plan to get you seen in Google and AI search, ChatGPT, Perplexity, AI Overviews. Every month builds on the last.</p></div>
       </div>
     </div>
   </section>
