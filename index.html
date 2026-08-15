@@ -72,7 +72,6 @@
   h1,h2,h3{font-family:var(--font-display)}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
   a{color:inherit;text-decoration:none}
-  .mono{font-family:'JetBrains Mono',monospace}
   .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue-bright);display:inline-flex;align-items:center;gap:8px}
   .eyebrow::before{content:"";width:7px;height:7px;background:var(--blue);border-radius:50%;box-shadow:0 0 10px var(--blue)}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:15px;padding:13px 24px;border-radius:8px;cursor:pointer;transition:.16s ease;line-height:1;border:1px solid transparent;font-family:var(--font-body)}
@@ -128,15 +127,6 @@
   @keyframes scpulse{0%,100%{opacity:.5;transform:scale(.8)}50%{opacity:1;transform:scale(1.2)}}
   .hero p.lead{font-family:var(--font-display);font-style:italic;font-size:clamp(19px,2.2vw,22px);line-height:1.5;color:var(--muted);max-width:60ch}
   .hero-cta{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
-  .terminal{margin-top:54px;background:var(--panel);border:1px solid var(--line-2);border-radius:12px;overflow:hidden;box-shadow:0 30px 80px -40px rgba(0,0,0,.8)}
-  .term-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel-2)}
-  .term-bar .dt{width:11px;height:11px;border-radius:50%;background:#2a3340}
-  .term-bar .ttl{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-left:8px}
-  .term-body{padding:22px 24px;font-family:'JetBrains Mono',monospace;font-size:14px;line-height:1.9}
-  .term-body .c{color:var(--muted)}
-  .term-body .p{color:var(--blue-bright)}
-  .term-body .ok{color:#4ade80}
-  .term-body .v{color:var(--ink)}
 
   section{padding:104px 0;position:relative}
   .sec-head{margin-bottom:52px}
@@ -194,8 +184,8 @@
   #contact h2{font-size:clamp(32px,4.4vw,54px);font-weight:400;letter-spacing:-0.01em;line-height:1;margin:16px 0 18px}
   #contact h2 .g{color:var(--blue-bright)}
   .contact-lead{font-family:var(--font-display);font-style:italic;color:var(--muted);font-size:19px;max-width:42ch;margin-bottom:32px}
-  .cmeta{display:grid;gap:14px;font-family:'JetBrains Mono',monospace}
-  .cm{display:flex;gap:13px;align-items:center;font-size:14.5px}
+  .cmeta{display:grid;gap:14px;font-family:var(--font-body)}
+  .cm{display:flex;gap:13px;align-items:center;font-size:15px;font-weight:500}
   .cm .ic{width:40px;height:40px;border-radius:9px;background:var(--panel);border:1px solid var(--line-2);display:grid;place-items:center;color:var(--blue-bright);flex:0 0 auto}
   form{display:grid;gap:18px;background:var(--panel);border:1px solid var(--line-2);border-radius:14px;padding:34px}
   .field{display:grid;gap:8px}
@@ -204,7 +194,7 @@
   .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px color-mix(in srgb,var(--blue) 18%,transparent)}
   .field textarea{resize:vertical;min-height:104px}
   .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  .form-msg{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;min-height:18px}
+  .form-msg{font-family:var(--font-body);font-size:14px;font-weight:500;min-height:18px}
   .form-msg.err{color:#f87171}
   .form-msg.ok{color:#4ade80}
   .success{display:none;text-align:center;padding:50px 22px;background:var(--panel);border:1px solid var(--blue);border-radius:14px}
@@ -215,7 +205,7 @@
 
   footer{border-top:1px solid var(--line);padding:38px 0}
   .foot{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
-  .foot small{color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:13.5px}
+  .foot small{color:var(--muted);font-family:var(--font-body);font-size:13.5px}
   .foot small a{color:var(--blue-bright);text-decoration:underline;text-underline-offset:2px}
   .foot small a:hover{color:#fff}
 
@@ -255,8 +245,6 @@
   a.cm:hover{color:var(--blue-bright)}
   body[data-sharp="on"] .btn,
   body[data-sharp="on"] .plan,
-  body[data-sharp="on"] .terminal,
-  body[data-sharp="on"] .term-bar,
   body[data-sharp="on"] form,
   body[data-sharp="on"] .field input,
   body[data-sharp="on"] .field textarea,
@@ -308,7 +296,6 @@
     .sc-cap{font-size:16px}
   }
   @media(max-width:520px){
-    .term-body{font-size:12.5px}
     .sc-main{gap:14px}
   }
 </style>
@@ -361,7 +348,7 @@
         <span class="spark s3" aria-hidden="true">✦</span>
         <span class="eyebrow">No generalists here · Solo SEO &amp; AI Search Specialist · Buenos Aires, AR</span>
         <h1>Just a <em>damn good</em> <span class="mark">SEO &amp; AI Search</span> Specialist.</h1>
-        <p class="lead">I get small businesses found, on Google and in AI search. One expert. No agency, no fluff, no junior doing the real work.</p>
+        <p class="lead">I get growing companies found, on Google and in AI search. One expert. No agency, no fluff, no junior doing the real work.</p>
         <div class="hero-cta">
           <a href="#pricing" class="btn btn-primary">View pricing</a>
         </div>
@@ -567,10 +554,10 @@
     var name=document.getElementById('name').value.trim();
     var email=document.getElementById('email').value.trim();
     msg.className='form-msg';
-    if(!name||!email){msg.textContent='> error: name and email required';msg.classList.add('err');return;}
-    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){msg.textContent='> error: invalid email';msg.classList.add('err');return;}
+    if(!name||!email){msg.textContent='Name and email are required.';msg.classList.add('err');return;}
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){msg.textContent='Please enter a valid email address.';msg.classList.add('err');return;}
 
-    msg.textContent='> sending...';msg.classList.add('ok');
+    msg.textContent='Sending...';msg.classList.add('ok');
     var data=new FormData(form);
     fetch('https://api.web3forms.com/submit',{method:'POST',body:data,headers:{'Accept':'application/json'}})
       .then(function(r){return r.json();})
@@ -580,12 +567,12 @@
           document.getElementById('success').classList.add('show');
         }else{
           msg.className='form-msg err';
-          msg.textContent='> error: '+(json.message||'could not send, email me directly');
+          msg.textContent=json.message||'Could not send. Please email me directly.';
         }
       })
       .catch(function(){
         msg.className='form-msg err';
-        msg.textContent='> error: network issue, please email jessie@sparkplugseo.com';
+        msg.textContent='Network issue. Please email jessie@sparkplugseo.com directly.';
       });
   });
 </script>
