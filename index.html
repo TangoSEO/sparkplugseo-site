@@ -33,7 +33,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
 <!-- Google Analytics 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L3T4ENX8ZD"></script>
@@ -46,7 +46,7 @@
 
 <style>
   /* Display face: Instrument Serif (regular + italic only, no bold weights exist).
-     Body: Archivo. Labels: JetBrains Mono. */
+     Body: Instrument Sans (companion family, max weight 700). Labels: JetBrains Mono. */
   :root{
     --bg:#0a0c10;
     --panel:#0f1218;
@@ -59,7 +59,7 @@
     --line-2:#2a3340;
     --maxw:1200px;
     --dark-bg:#0a0c10;
-    --font-body:'Archivo',sans-serif;
+    --font-body:'Instrument Sans',sans-serif;
     --font-display:'Instrument Serif',Georgia,serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -83,7 +83,7 @@
   .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
   .brand{display:flex;align-items:center;gap:9px;line-height:1}
   .brand-mark{width:30px;height:30px;flex:0 0 auto;filter:drop-shadow(0 0 14px color-mix(in srgb,var(--blue) 45%,transparent))}
-  .brand-word{font-family:var(--font-body);font-weight:800;font-size:21px;letter-spacing:-0.02em;color:var(--ink)}
+  .brand-word{font-family:var(--font-body);font-weight:700;font-size:21px;letter-spacing:-0.02em;color:var(--ink)}
   .brand-word .bp{color:var(--blue-bright)}
   .brand-chip{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:11px;letter-spacing:0.1em;color:#fff;background:var(--blue);border-radius:6px;padding:3px 7px;box-shadow:0 0 0 1px color-mix(in srgb,var(--blue) 40%,transparent)}
   .nav-links{display:flex;align-items:center;gap:32px;font-size:14.5px;font-weight:500;font-family:var(--font-body)}
