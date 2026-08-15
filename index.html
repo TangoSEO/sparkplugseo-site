@@ -51,10 +51,11 @@
     --bg:#0a0c10;
     --panel:#0f1218;
     --panel-2:#141821;
-    --ink:#e8ebf0;
-    --muted:#8b94a3;
+    --ink:#ffffff;
+    --muted:#b3bdcc;
     --blue:#3b82f6;
     --blue-bright:#60a5fa;
+    --gold:#e8b54d;
     --line:#1e2530;
     --line-2:#2a3340;
     --maxw:1200px;
@@ -63,6 +64,7 @@
     --font-display:'Instrument Serif',Georgia,serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
+  ::selection{background:var(--blue);color:#fff}
   html{scroll-behavior:smooth}
   body{font-family:var(--font-body);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;line-height:1.6;overflow-x:hidden;
     background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
@@ -71,7 +73,7 @@
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
   a{color:inherit;text-decoration:none}
   .mono{font-family:'JetBrains Mono',monospace}
-  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue-bright);display:inline-flex;align-items:center;gap:8px}
+  .eyebrow{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue-bright);display:inline-flex;align-items:center;gap:8px}
   .eyebrow::before{content:"";width:7px;height:7px;background:var(--blue);border-radius:50%;box-shadow:0 0 10px var(--blue)}
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:15px;padding:13px 24px;border-radius:8px;cursor:pointer;transition:.16s ease;line-height:1;border:1px solid transparent;font-family:var(--font-body)}
   .btn-primary{background:var(--blue);color:#fff;box-shadow:0 0 0 1px color-mix(in srgb,var(--blue) 40%,transparent),0 8px 24px -8px color-mix(in srgb,var(--blue) 60%,transparent)}
@@ -86,7 +88,7 @@
   .brand-word{font-family:var(--font-body);font-weight:700;font-size:21px;letter-spacing:-0.02em;color:var(--ink)}
   .brand-word .bp{color:var(--blue-bright)}
   .brand-chip{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:11px;letter-spacing:0.1em;color:#fff;background:var(--blue);border-radius:6px;padding:3px 7px;box-shadow:0 0 0 1px color-mix(in srgb,var(--blue) 40%,transparent)}
-  .nav-links{display:flex;align-items:center;gap:32px;font-size:14.5px;font-weight:500;font-family:var(--font-body)}
+  .nav-links{display:flex;align-items:center;gap:32px;font-size:15px;font-weight:500;font-family:var(--font-body)}
   .nav-links a:not(.btn):hover{color:var(--blue-bright)}
   .nav-toggle{display:none;background:none;border:0;flex-direction:column;gap:5px;cursor:pointer}
   .nav-toggle span{width:24px;height:2px;background:var(--ink);display:block}
@@ -97,23 +99,23 @@
   .hero h1{font-size:clamp(44px,6.8vw,86px);font-weight:400;line-height:1.02;letter-spacing:-0.012em;margin:24px 0}
   .hero h1 .g{color:var(--blue-bright)}
   .hero h1 .mark{display:inline-block;white-space:nowrap;background:var(--blue);color:#fff;padding:0 .14em;border-radius:12px;transform:rotate(-2deg);box-shadow:0 12px 38px -12px color-mix(in srgb,var(--blue) 78%,transparent)}
-  .spark{position:absolute;color:var(--blue-bright);pointer-events:none;opacity:.55;line-height:1;z-index:2}
+  .spark{position:absolute;color:var(--gold);pointer-events:none;opacity:.7;line-height:1;z-index:2}
   .spark.s1{top:-8px;right:7%;font-size:30px}
   .spark.s2{top:40%;left:-20px;font-size:20px}
   .spark.s3{bottom:16%;right:16%;font-size:15px}
   /* stat panel (replaces terminal) */
   .statcard{margin-top:48px;background:var(--panel);border:1px solid var(--line-2);border-radius:16px;padding:24px 28px;max-width:600px;box-shadow:0 30px 80px -40px rgba(0,0,0,.8)}
   .sc-head{display:flex;align-items:center;justify-content:space-between;gap:14px}
-  .sc-tag{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--blue-bright);letter-spacing:.06em}
-  .sc-live{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);display:flex;align-items:center;gap:8px}
+  .sc-tag{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--blue-bright);letter-spacing:.06em}
+  .sc-live{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--muted);display:flex;align-items:center;gap:8px}
   .sc-live .d{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 10px #4ade80}
   .sc-main{display:flex;align-items:center;gap:18px;margin:12px 0 18px;flex-wrap:wrap}
   .sc-num{font-family:var(--font-display);font-size:clamp(44px,6vw,72px);font-weight:400;line-height:.85;letter-spacing:-.01em;color:var(--blue-bright)}
   .sc-num .plus{color:var(--blue)}
-  .sc-cap{font-family:var(--font-display);font-size:17px;color:#c3cad6;max-width:18ch;font-weight:400}
+  .sc-cap{font-family:var(--font-display);font-size:17.5px;color:#eef2f7;max-width:18ch;font-weight:400}
   .sc-regions{display:flex;align-items:center;gap:9px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:20px}
-  .rline{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.08em;color:#8b94a3}
-  .rnote{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);margin-left:auto}
+  .rline{font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:.08em;color:var(--muted)}
+  .rnote{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:var(--muted);margin-left:auto}
   @media (prefers-reduced-motion: no-preference){
     .hero h1 .mark{animation:markPop .55s .15s cubic-bezier(.2,.9,.25,1) both}
     .spark{animation:twinkle 2.6s ease-in-out infinite}
@@ -141,12 +143,15 @@
   .sec-head h2{font-size:clamp(32px,4.6vw,54px);font-weight:400;letter-spacing:-0.01em;line-height:1;margin-top:16px;max-width:20ch}
   .sec-head p{font-family:var(--font-display);font-style:italic;color:var(--muted);font-size:19px;margin-top:14px;max-width:56ch}
 
-  /* SERVICES (editorial lever rows) */
+  /* SERVICES (editorial lever rows + reserved image slot) */
+  .svc-cols{display:grid;grid-template-columns:minmax(0,680px) 1fr;gap:56px;align-items:center}
+  .svc-aside{display:flex;align-items:center;justify-content:center}
+  .svc-aside svg{width:min(300px,75%);height:auto;opacity:.16}
   .svc-grid{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line-2)}
   .svc{display:grid;grid-template-columns:58px 1fr;gap:6px 24px;align-items:baseline;padding:24px 6px;border-bottom:1px solid var(--line-2)}
   .svc .ln{font-family:var(--font-display);font-style:italic;font-size:40px;line-height:1;color:#2563eb}
   .svc h3{font-size:29px;font-weight:400;margin:0}
-  .svc p{grid-column:2;font-family:var(--font-display);color:var(--muted);font-size:17px;line-height:1.5;margin:0;max-width:56ch}
+  .svc p{grid-column:2;font-family:var(--font-display);color:var(--muted);font-size:18px;line-height:1.5;margin:0;max-width:56ch}
 
   /* WHY / metrics */
   .why-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
@@ -155,14 +160,14 @@
   #why p{font-family:var(--font-display);color:var(--muted);font-size:18px;line-height:1.55;margin-bottom:18px;max-width:52ch}
   #why p b{color:var(--ink);font-weight:400}
   #why .signature{display:flex;align-items:center;gap:8px;font-size:15.5px;color:color-mix(in srgb,var(--blue-bright) 42%,var(--muted));font-weight:400;margin:2px 0 22px}
-  #why .signature .sig-spark{color:color-mix(in srgb,var(--blue-bright) 60%,var(--muted));font-size:12px;flex:0 0 auto}
+  #why .signature .sig-spark{color:var(--gold);font-size:12px;flex:0 0 auto}
   #why .signature a{color:color-mix(in srgb,var(--blue-bright) 70%,var(--muted));font-weight:600;text-decoration:none;border-bottom:1px solid color-mix(in srgb,var(--blue-bright) 35%,transparent)}
   #why .signature a:hover{color:var(--blue-bright);border-bottom-color:var(--blue-bright)}
   .panel-card{border-top:1px solid var(--line-2)}
   .pc-row{display:grid;grid-template-columns:44px 1fr auto;align-items:baseline;gap:18px;padding:24px 4px;border-bottom:1px solid var(--line-2)}
   .pc-row .ln{font-family:var(--font-display);font-style:italic;font-size:30px;line-height:1;color:var(--blue-bright)}
-  .pc-row .lab{font-size:16px;font-weight:500}
-  .pc-row .val{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:.08em;color:var(--muted)}
+  .pc-row .lab{font-size:17px;font-weight:500}
+  .pc-row .val{font-family:'JetBrains Mono',monospace;font-size:12.5px;letter-spacing:.08em;color:var(--muted)}
 
   /* PRICING */
   .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
@@ -170,14 +175,14 @@
   .plan.featured{border-color:var(--blue);box-shadow:0 0 0 1px var(--blue),0 30px 70px -40px color-mix(in srgb,var(--blue) 60%,transparent);background:linear-gradient(180deg,color-mix(in srgb,var(--blue) 8%,transparent),transparent)}
   .plan .pin{position:absolute;top:-13px;left:28px;background:#fff;color:var(--blue);border:1px solid color-mix(in srgb,var(--blue) 35%,transparent);font-family:var(--font-body);font-size:12px;font-weight:600;letter-spacing:0;padding:5px 12px;border-radius:999px;box-shadow:0 2px 8px rgba(13,17,23,.06)}
   .plan .pname{font-family:'JetBrains Mono',monospace;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:var(--blue-bright)}
-  .plan .pfor{font-family:var(--font-display);font-size:16px;color:var(--muted);margin-top:12px;min-height:48px}
+  .plan .pfor{font-family:var(--font-display);font-size:17px;color:var(--muted);margin-top:12px;min-height:48px}
   .plan .price{display:flex;align-items:baseline;gap:4px;margin:18px 0 4px}
   .plan .price .cur{font-size:22px;color:var(--muted);align-self:flex-start;margin-top:8px}
   .plan .price .amt{font-size:54px;font-weight:600;line-height:1;letter-spacing:-0.02em}
-  .plan .price .per{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--muted)}
+  .plan .price .per{font-family:'JetBrains Mono',monospace;font-size:13.5px;color:var(--muted)}
   .plan hr{border:0;border-top:1px solid var(--line);margin:22px 0}
   .feat{list-style:none;display:grid;gap:12px;margin-bottom:28px;flex:1}
-  .feat li{display:flex;gap:11px;font-size:14px;align-items:flex-start;color:#c3cad6}
+  .feat li{display:flex;gap:11px;font-size:15px;align-items:flex-start;color:#c3cad6}
   .feat .ck{flex:0 0 auto;width:18px;height:18px;border-radius:5px;background:color-mix(in srgb,var(--blue) 16%,transparent);color:var(--blue-bright);display:grid;place-items:center;font-size:11px;font-weight:700;margin-top:2px;font-family:'JetBrains Mono',monospace}
   .plan.featured .feat .ck{background:var(--blue);color:#fff}
   .plan .btn{width:100%}
@@ -190,16 +195,16 @@
   #contact h2 .g{color:var(--blue-bright)}
   .contact-lead{font-family:var(--font-display);font-style:italic;color:var(--muted);font-size:19px;max-width:42ch;margin-bottom:32px}
   .cmeta{display:grid;gap:14px;font-family:'JetBrains Mono',monospace}
-  .cm{display:flex;gap:13px;align-items:center;font-size:14px}
+  .cm{display:flex;gap:13px;align-items:center;font-size:14.5px}
   .cm .ic{width:40px;height:40px;border-radius:9px;background:var(--panel);border:1px solid var(--line-2);display:grid;place-items:center;color:var(--blue-bright);flex:0 0 auto}
   form{display:grid;gap:18px;background:var(--panel);border:1px solid var(--line-2);border-radius:14px;padding:34px}
   .field{display:grid;gap:8px}
-  .field label{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.04em;color:var(--muted);text-transform:uppercase}
-  .field input,.field textarea,.field select{background:var(--bg);border:1px solid var(--line-2);border-radius:8px;padding:13px 14px;font-family:var(--font-body);font-size:15px;color:var(--ink);transition:.15s}
+  .field label{font-family:'JetBrains Mono',monospace;font-size:12.5px;font-weight:500;letter-spacing:0.04em;color:var(--muted);text-transform:uppercase}
+  .field input,.field textarea,.field select{background:var(--bg);border:1px solid var(--line-2);border-radius:8px;padding:13px 14px;font-family:var(--font-body);font-size:16px;color:var(--ink);transition:.15s}
   .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px color-mix(in srgb,var(--blue) 18%,transparent)}
   .field textarea{resize:vertical;min-height:104px}
   .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-  .form-msg{font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;min-height:18px}
+  .form-msg{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:500;min-height:18px}
   .form-msg.err{color:#f87171}
   .form-msg.ok{color:#4ade80}
   .success{display:none;text-align:center;padding:50px 22px;background:var(--panel);border:1px solid var(--blue);border-radius:14px}
@@ -210,7 +215,7 @@
 
   footer{border-top:1px solid var(--line);padding:38px 0}
   .foot{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
-  .foot small{color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:13px}
+  .foot small{color:var(--muted);font-family:'JetBrains Mono',monospace;font-size:13.5px}
   .foot small a{color:var(--blue-bright);text-decoration:underline;text-underline-offset:2px}
   .foot small a:hover{color:#fff}
 
@@ -218,12 +223,12 @@
   section.light{
     --panel:#ffffff;
     --panel-2:#eef1f6;
-    --ink:#0d1117;
-    --muted:#586273;
+    --ink:#0a0a0a;
+    --muted:#414b5c;
     --line:#e7eaf0;
     --line-2:#d6dce6;
     --bg:#ffffff;
-    --light-bg:#f4f6fa;
+    --light-bg:#f6f7fa;
     position:relative;
     background:var(--light-bg);
     color:var(--ink);
@@ -238,7 +243,7 @@
   section.light .plan .pname,
   section.light .plan .price .per,
   section.light .price-note a{color:var(--blue)}
-  section.light .feat li{color:#39424f}
+  section.light .feat li{color:#2e3743}
   section.light .plan{box-shadow:0 1px 2px rgba(13,17,23,.04)}
   section.light .plan.featured{box-shadow:0 0 0 1px var(--blue),0 30px 60px -36px color-mix(in srgb,var(--blue) 45%,transparent)}
 
@@ -268,6 +273,8 @@
     .nav-toggle{display:flex}
     .nav.open .nav-links{display:flex;position:absolute;top:70px;left:0;right:0;background:var(--bg);flex-direction:column;align-items:flex-start;gap:0;padding:8px 32px 22px;border-bottom:1px solid var(--line)}
     .nav.open .nav-links a{padding:13px 0;width:100%;border-bottom:1px solid var(--line)}
+    .svc-cols{grid-template-columns:1fr}
+    .svc-aside{display:none}
     .svc{grid-template-columns:44px 1fr;gap:6px 16px}
     .why-grid{grid-template-columns:1fr;gap:40px}
     .price-grid{grid-template-columns:1fr;gap:30px}
@@ -384,11 +391,17 @@
         <h2>Four levers I pull to grow organic traffic</h2>
         <p>No bloated retainers. No junior handoffs. Just the work that moves rankings.</p>
       </div>
-      <div class="svc-grid">
-        <div class="svc"><span class="ln" aria-hidden="true">1</span><h3>Technical SEO</h3><p>Audits, site speed, schema, the fixes under the hood that earn Google's trust.</p></div>
-        <div class="svc"><span class="ln" aria-hidden="true">2</span><h3>Indexing &amp; Crawl</h3><p>Pages not showing up? I find why, and fix it, so they rank.</p></div>
-        <div class="svc"><span class="ln" aria-hidden="true">3</span><h3>Content &amp; On-Page</h3><p>Briefs and on-page work that match what people search, written for humans.</p></div>
-        <div class="svc"><span class="ln" aria-hidden="true">4</span><h3>SEO &amp; AI Search Strategy</h3><p>A clear plan to get you seen in Google and AI search, ChatGPT, Perplexity, AI Overviews. Every month builds on the last.</p></div>
+      <div class="svc-cols">
+        <div class="svc-grid">
+          <div class="svc"><span class="ln" aria-hidden="true">1</span><h3>Technical SEO</h3><p>Audits, site speed, schema, the fixes under the hood that earn Google's trust.</p></div>
+          <div class="svc"><span class="ln" aria-hidden="true">2</span><h3>Indexing &amp; Crawl</h3><p>Pages not showing up? I find why, and fix it, so they rank.</p></div>
+          <div class="svc"><span class="ln" aria-hidden="true">3</span><h3>Content &amp; On-Page</h3><p>Briefs and on-page work that match what people search, written for humans.</p></div>
+          <div class="svc"><span class="ln" aria-hidden="true">4</span><h3>SEO &amp; AI Search Strategy</h3><p>A clear plan to get you seen in Google and AI search, ChatGPT, Perplexity, AI Overviews. Every month builds on the last.</p></div>
+        </div>
+        <!-- image slot: replace the watermark bolt with a portrait or results graphic when ready -->
+        <aside class="svc-aside" aria-hidden="true">
+          <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M35 11 L18 36 H29 L27 54 L47 27 H35 L40 11 Z" fill="#e8b54d"/></svg>
+        </aside>
       </div>
     </div>
   </section>
